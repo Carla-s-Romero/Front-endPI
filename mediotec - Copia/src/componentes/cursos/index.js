@@ -1,3 +1,4 @@
+
 export default function curso({image, image2, paragrafo, title, topics}) {
   
   return(

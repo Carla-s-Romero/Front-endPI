@@ -13,8 +13,7 @@ export default function Mapa() {
         }}
         allowFullScreen
         loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
+        referrerPolicy="no-referrer-when-downgrade"></iframe>
       <style jsx>{`
 
           @media (max-width: 1034px) {
