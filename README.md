@@ -7,12 +7,12 @@ Projeto acadêmico para o Mediotec, focado em desenvolver uma interface de usuá
 1 - Clique no botão verde "Code" e copie a URL do repositório.
 
 2 - Abra o Visual Studio Code e execute os seguintes comandos no terminal:
-
-   ```bash
+```
    git remote add origin https://github.com/Carla-s-Romero/ Front-endPI.git
-
-   git push origin main
- ```
+```
+```     
+    git push origin main
+```
 
 3 -Você também pode baixar o arquivo em download.zip presente no botão verde chamado 'Code'.
 ## 📁 Instalação dos Arquivos React.js
@@ -21,6 +21,11 @@ Para instalar as dependências do React.js, escreva em seu terminal do Visual St
 
 ```     
     npm install
+```
+Ou apenas:
+
+```     
+    npm i
 ```
 
 Em seguida, escreva:
