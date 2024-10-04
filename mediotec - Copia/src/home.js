@@ -10,9 +10,10 @@ import {
   linha, 
   iconLaranja, 
   iconVermelho, 
-  decoSuper, 
+  beneficios, 
   CourseCard,
-  Header,
+  logo,
+  perfil,
   Mapa,
   Footer,
 } from '../src/imports/imports'; 
@@ -24,7 +25,16 @@ import '../src/css/App.css';
 function Home() {
   return (
     <main className="Home">
-     <Header />
+             <header className="header-app">
+            <img src={logo} className="App-logo" alt="logo" />
+            <nav className='nav-home'>
+                <img src={perfil} className="perfil-icon" alt="perfil-icon"/> 
+                <div className="opcao-login">
+                    <a href="#a" id="portalLogin">Portal do aluno</a>
+                    <Link to="/login" id="acessar">Acesse sua conta</Link> {/* Rota corrigida */}
+                </div>
+            </nav>
+        </header>
 
       <section>
         <img src={mediotec} className="imgMediotec" alt="logo" /> 
@@ -99,7 +109,7 @@ function Home() {
 
       {/* Benefícios do curso */}
       <section className="beneficiosCurso">
-        <img src={decoSuper} id="imgAluno" alt=""/>
+        <img src={beneficios} id="imgAluno" alt=""/>
       </section>
 
       {/* Localização */}

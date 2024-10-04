@@ -1,23 +1,71 @@
 import { Link } from "react-router-dom";
 import { 
-    logo, 
-    perfil
+  Header,
+  Footer,
+  TitleCadastroLogin,
+  decoracaoInfer,
+  triangulo,
+  Button,
+  professor,
+  aluno,
+  coordenador
   } from './imports/imports'; 
 
-function Boletim() {
+  import './css/login.css'
+
+function login() {
   return (
-    <header className="App-header">
-    <img src={logo} className="App-logo" alt="logo" />
-      
-    <nav className='nav-home'>
-      <img src={perfil} className="perfil-icon" alt="perfil-icon"/> 
-      <div className="opcao-login">
-        <a href="#a" id="portalLogin">Portal do aluno</a>
-        <Link to="/boletim" id="acessar">Acesse sua conta</Link>
+    <div className="login">
+          <Header />
+            <img src={triangulo} alt='decoracao' id='decInferior'/>
+         <TitleCadastroLogin 
+         title= "Olá, Seja bem-vindo!!"
+         paragrafo= "preencha os dados abaixo para realizar seu cadastro"
+         />
+
+
+<form action="" method="post">
+            <section className="ContainerSquare">
+
+     <div className='Square'>
+
+        <button className="new-square" id="professor">
+          <img src={professor} alt="Professor" />
+                <h2>Professor</h2>
+                     <p className="description">O professor é o responsável por planejar, ensinar e orientar alunos, 
+                         promovendo o aprendizado e o desenvolvimento de habilidades e valores.</p>
+        </button>
+
+        <button className="new-square" id="aluno">
+            <img src={aluno} alt="Aluno" />
+                <h2>Aluno</h2>
+                     <p className="description">O aluno é aquele que busca aprendizado, 
+                       desenvolvendo habilidades e conhecimentos através do estudo contínuo e da curiosidade.</p>
+        </button>
+
+        <button className="new-square" id="coordenador">
+          <img src={coordenador} alt="Coordenador" />
+               <h2>Coordenador</h2>
+                  <p className="description">O coordenador é o responsável por planejar, 
+                    organizar e supervisionar atividades e equipes, garantindo o cumprimento 
+                    de objetivos e a eficiência dos processos.</p>
+        </button>
+
+        </div>
+        </section> 
+
+      <div className='button-container'>
+      <Button 
+            title="Próximo"
+        />
       </div>
-    </nav>
-  </header>
+       
+            </form>
+
+        <img src={decoracaoInfer} alt='decoracao' id='decInferior'/>
+  <Footer />
+    </div>
   );
 }
 
-export default Boletim;
+export default login;
