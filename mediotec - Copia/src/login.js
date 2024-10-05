@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
 import { 
   Header,
   Footer,
@@ -9,63 +9,93 @@ import {
   professor,
   aluno,
   coordenador
-  } from './imports/imports'; 
+} from './imports/imports'; 
 
-  import './css/login.css'
+import './css/login.css';
+import Login2 from './login2';
 
-function login() {
+function Login() {
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [showLogin2, setShowLogin2] = useState(false); // Novo estado para exibir Login2
+
+  const handleCardClick = (card) => {
+    setSelectedCard(card);
+    setErrorMessage('');
+  };
+
+  const handleNextButtonClick = () => {
+    if (!selectedCard) {
+      setErrorMessage('Por favor, selecione um perfil para continuar.');
+    } else {
+      setShowLogin2(true); 
+    }
+  };
+
+  if (showLogin2) {
+    return <Login2 />;
+  }
+
   return (
     <div className="login">
-          <Header />
-            <img src={triangulo} alt='decoracao' id='decInferior'/>
-         <TitleCadastroLogin 
-         title= "Olá, Seja bem-vindo!!"
-         paragrafo= "preencha os dados abaixo para realizar seu cadastro"
-         />
+      <Header />
+      <img src={triangulo} alt='decoracao' id='decInferior' />
+      <TitleCadastroLogin 
+        title="Olá, Seja bem-vindo!!"
+        paragrafo="Selecione um card para dar continuidade ao seu login"
+      />
 
+      <form>
+        <section className="ContainerSquare">
+          <div className='Square'>
+            <button 
+              type="button" 
+              className={`new-square ${selectedCard === 'Professor' ? 'selected' : ''}`}
+              onClick={() => handleCardClick('Professor')}
+            >
+              <img src={professor} alt="Professor" />
+              <h2>Professor</h2>
+              <p className="description">O professor é o responsável por planejar, ensinar e orientar alunos, promovendo o aprendizado e o desenvolvimento de habilidades e valores.</p>
+            </button>
 
-<form action="" method="post">
-            <section className="ContainerSquare">
+            <button 
+              type="button" 
+              className={`new-square ${selectedCard === 'Aluno' ? 'selected' : ''}`}
+              onClick={() => handleCardClick('Aluno')}
+            >
+              <img src={aluno} alt="Aluno" />
+              <h2>Aluno</h2>
+              <p className="description">O aluno é aquele que busca aprendizado, desenvolvendo habilidades e conhecimentos através do estudo contínuo e da curiosidade.</p>
+            </button>
 
-     <div className='Square'>
+            <button 
+              type="button" 
+              className={`new-square ${selectedCard === 'Coordenador' ? 'selected' : ''}`}
+              onClick={() => handleCardClick('Coordenador')}
+            >
+              <img src={coordenador} alt="Coordenador" />
+              <h2>Coordenador</h2>
+              <p className="description">O coordenador é o responsável por planejar, organizar e supervisionar atividades e equipes, garantindo o cumprimento de objetivos e a eficiência dos processos.</p>
+            </button>
+          </div>
+        </section>
 
-        <button className="new-square" id="professor">
-          <img src={professor} alt="Professor" />
-                <h2>Professor</h2>
-                     <p className="description">O professor é o responsável por planejar, ensinar e orientar alunos, 
-                         promovendo o aprendizado e o desenvolvimento de habilidades e valores.</p>
-        </button>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-        <button className="new-square" id="aluno">
-            <img src={aluno} alt="Aluno" />
-                <h2>Aluno</h2>
-                     <p className="description">O aluno é aquele que busca aprendizado, 
-                       desenvolvendo habilidades e conhecimentos através do estudo contínuo e da curiosidade.</p>
-        </button>
-
-        <button className="new-square" id="coordenador">
-          <img src={coordenador} alt="Coordenador" />
-               <h2>Coordenador</h2>
-                  <p className="description">O coordenador é o responsável por planejar, 
-                    organizar e supervisionar atividades e equipes, garantindo o cumprimento 
-                    de objetivos e a eficiência dos processos.</p>
-        </button>
-
-        </div>
-        </section> 
-
-      <div className='button-container'>
-      <Button 
+        <div className='button-container'>
+          <Button 
             title="Próximo"
-        />
-      </div>
-       
-            </form>
+            onClick={handleNextButtonClick}
+            disabled={!selectedCard} 
+          />
+        </div>
+      </form>
 
-        <img src={decoracaoInfer} alt='decoracao' id='decInferior'/>
-  <Footer />
+      <img src={decoracaoInfer} alt='decoracao' id='decInferior' />
+      <Footer />
     </div>
   );
 }
 
-export default login;
+export default Login;
+

@@ -46,6 +46,11 @@ import professor from '../img/loginCadastro/professor.png'
 import coordenador from '../img/loginCadastro/coordenador.png'
 import aluno from '../img/loginCadastro/aluno.png'
 
+// Img Boletim
+
+import decTitle from '../img/boletim/H1Triangulo.png'
+import dec from '../img/boletim/dec.png'
+
 export {
     // exportando componentes
     CourseCard,
@@ -77,5 +82,8 @@ export {
     decoracaoInfer,
     professor,
     coordenador,
-    aluno
+    aluno,
+
+    decTitle,
+    dec
 };
