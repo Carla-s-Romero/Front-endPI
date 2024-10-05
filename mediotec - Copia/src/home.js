@@ -23,6 +23,8 @@ import {
 import '../src/css/App.css';
 
 function Home() {
+
+
   return (
     <main className="Home">
              <header className="header-app">

@@ -1,39 +1,48 @@
-import React, { useState } from 'react';
 
-function Login2({ role }) {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+import { 
+  Header,
+  Footer,
+  TitleCadastroLogin,
+  decoracaoInfer,
+  triangulo,
+  Button,
+} from './imports/imports'; 
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Aqui você pode adicionar a lógica de autenticação ou qualquer outra lógica necessária
-    console.log(`Role: ${role}, Email: ${email}, Password: ${password}`);
-  };
+
+
+function Login() {
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>Preencha os dados para {role}</h2>
-      <label>
-        Email:
-        <input 
-          type="email" 
-          value={email} 
-          onChange={(e) => setEmail(e.target.value)} 
-          required 
-        />
-      </label>
-      <label>
-        Senha:
-        <input 
-          type="password" 
-          value={password} 
-          onChange={(e) => setPassword(e.target.value)} 
-          required 
-        />
-      </label>
-      <button type="submit">Entrar</button>
-    </form>
+    <div className="login">
+      <Header />
+      <img src={triangulo} alt='decoracao' id='decInferior' />
+      <TitleCadastroLogin 
+        title="Olá, Seja bem-vindo!!"
+        paragrafo="preencha os dados abaixo para realizar seu login"
+      />
+
+      <form action=''>
+        <section className='forms-login'>
+
+          <div className='forms-teste'>
+          <label>E-mail:</label>
+          <input type='email' id='email'  placeholder="Digite seu email" required></input>
+          <br />
+          <label id='labelSenha'>Senha:</label>
+          <input type='password' id='password' placeholder="Digite sua senha" required></input>
+
+          <a href='#a' id='EsquecSenha'>Esqueceu a senha?</a>
+
+          <Button title="Finalizar"/>
+          </div>
+        </section>
+      </form>
+
+      <img src={decoracaoInfer} alt='decoracao' id='decInferior' />
+      <Footer />
+    </div>
   );
 }
 
-export default Login2;
+export default Login;
+
