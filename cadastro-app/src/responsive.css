@@ -1,0 +1,84 @@
+
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .text-box, .welcome-text {
+      font-size: 1.2rem;
+      width: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      width: 6rem;
+      height: auto;
+    }
+  
+    .user-icon {
+      width: 3.5rem;
+      height: auto;
+    }
+  
+    .text-box, .welcome-text {
+      font-size: 1rem;
+    }
+  }
+
+  .progress-bar { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 40px;
+    top: calc(50% + 400px);
+    transform: translateY(-50%);
+  }
+  
+  .circle {
+    width: 36px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    flex-shrink: 0;
+    margin: 10px 0;
+  }
+  
+  .circle.filled {
+    background-color: #D9D9D9;
+  }
+  
+  .circle:first-of-type,
+  .circle:nth-of-type(2) {
+    background-color: #033A60;
+  }
+  
+  .line {
+    width: 11px;
+    height: 161px;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin: 10px 0;
+  }
+  
+  .line:first-of-type {
+    background-color: #033A60;
+  }
+  
+  .line.filled {
+    background-color: #D9D9D9;
+  }
+  
+  @media (max-width: 768px) {
+    .input-email,
+    .input-nome,
+    .input-senha,
+    .curso-select,
+    .disciplina-select {
+      width: 90%;
+    }
+  }
+  
