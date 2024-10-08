@@ -8,6 +8,7 @@ import {
   HeaderHome,
 } from './imports/imports'; 
 
+import { Link } from "react-router-dom";
 
 
 function Login() {
@@ -33,7 +34,8 @@ function Login() {
 
           <a href='#a' id='EsquecSenha'>Esqueceu a senha?</a>
 
-          <Button title="Finalizar"/>
+          
+          <Link to="/turma" id="turmas"><Button title="Finalizar" /></Link> 
           </div>
         </section>
       </form>

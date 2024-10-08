@@ -12,6 +12,7 @@ export default function Header() {
                     <a href="#a" id="portalLogin">Portal do aluno</a>
                     <Link to="/login" id="acessar">Acesse sua conta</Link>
                 </div>
+                
             </nav>
         </header>
     );
