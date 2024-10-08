@@ -1,11 +1,11 @@
 
 import { 
-  Header,
   Footer,
   TitleCadastroLogin,
   decoracaoInfer,
   triangulo,
   Button,
+  HeaderHome,
 } from './imports/imports'; 
 
 
@@ -14,7 +14,7 @@ function Login() {
 
   return (
     <div className="login">
-      <Header />
+      <HeaderHome />
       <img src={triangulo} alt='decoracao' id='decInferior' />
       <TitleCadastroLogin 
         title="Olá, Seja bem-vindo!!"

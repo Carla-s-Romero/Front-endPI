@@ -19,10 +19,9 @@ body{
 }
 
 /* cabeçalho */
-.header-app{
-  position: fixed;
-}
-
+  .header-app{
+    position: fixed;
+  }
 
   a{
     text-decoration: none;
