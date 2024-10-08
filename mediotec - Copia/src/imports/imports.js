@@ -28,8 +28,11 @@ import telefone from '../img/footer/telefone.png';
 import parceria from '../img/footer/Parceria.png';
 
 // Componentes
+import HeaderHome from '../componentes/headerHome/headerHome';
+import HeaderSite  from '../componentes/hearderSite/hearderSite';
+
 import CourseCard from '../componentes/cursos/index';
-import Header from '../componentes/header/header';
+
 import Mapa from '../componentes/mapa/mapa';
 import Footer from '../componentes/footer/footer';
 import TitleCadastroLogin from '../componentes/titlecadastroLogin/title';
@@ -51,14 +54,23 @@ import aluno from '../img/loginCadastro/aluno.png'
 import decTitle from '../img/boletim/H1Triangulo.png'
 import dec from '../img/boletim/dec.png'
 
+
+// Img HearderSite
+
+import iconPerfil from '../img/hearderSite/PerfilJanela.png'
+import iconConfiguracao from '../img/hearderSite/config.png'
+import iconSair from '../img/hearderSite/sair.png'
+import notificacao from '../img/hearderSite/Notificacao.png'
+
 export {
     // exportando componentes
     CourseCard,
-    Header,
+    HeaderHome,
     Mapa,
     Footer,
     TitleCadastroLogin,
     Button,
+    HeaderSite,
 
   // Exportando as imagens
     logo,
@@ -83,7 +95,10 @@ export {
     professor,
     coordenador,
     aluno,
-
+    iconPerfil,
     decTitle,
-    dec
+    dec,
+    iconConfiguracao,
+    iconSair,
+    notificacao
 };

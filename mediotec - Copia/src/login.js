@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { 
-  Header,
+  HeaderHome,
   Footer,
   TitleCadastroLogin,
   decoracaoInfer,
@@ -38,7 +38,7 @@ function Login() {
 
   return (
     <div className="login">
-      <Header />
+      <HeaderHome />
       <img src={triangulo} alt='decoracao' id='decInferior' />
       <TitleCadastroLogin 
         title="Olá, Seja bem-vindo!!"

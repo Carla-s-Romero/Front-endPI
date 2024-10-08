@@ -1,8 +1,8 @@
 import './button.css'
-export default function Botão({title, onClick, disabled}) {
+export default function Botão({title, onClick, disabled, id}) {
     return(
-      <div className='button-container'>
-        <button id='button-cadastro' onClick={onClick} disabled={disabled}>
+      <div className='button-container' id=''>
+        <button className='button-cadastro' id={id} onClick={onClick} disabled={disabled}>
           {title}
           </button>
       </div>
