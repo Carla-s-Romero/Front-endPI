@@ -119,7 +119,7 @@ function HeaderSite() {
               {showNotificationModal && (
                 <div className="modal-overlay">
                   <div className="modal-content">
-                    <h3>Criar Notificação</h3>
+                    <h1>Criar Notificação</h1>
                     <form action='' method='post'>
                       <label>Nome do Evento:</label>
                       <input type="text" placeholder="Nome do evento" />
