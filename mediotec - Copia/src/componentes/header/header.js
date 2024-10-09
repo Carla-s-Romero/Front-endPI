@@ -3,6 +3,7 @@ import { logo, perfil } from '../../imports/imports';
 import '../header/header.css';
 
 export default function Header() {
+    
     return (
         <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
